@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tetris Fusion - Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>TETRIS<span>FUSION</span></h1>
+        </header>
+
+        <main class="game-area">
+            <div class="side-panel left">
+                <div class="stat-box">
+                    <label>PONTOS</label>
+                    <div id="score">000000</div>
+                </div>
+                <div class="stat-box">
+                    <label>NÍVEL</label>
+                    <div id="level">1</div>
+                </div>
+                <div class="stat-box">
+                    <label>LINHAS</label>
+                    <div id="lines">0</div>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="tetris" width="240" height="400"></canvas>
+                <div id="overlay" class="hidden">
+                    <div class="overlay-content">
+                        <h2 id="overlay-text">PAUSADO</h2>
+                        <button id="start-btn">COMEÇAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="side-panel right">
+                <div class="next-box">
+                    <label>PRÓXIMO</label>
+                    <canvas id="next" width="80" height="80"></canvas>
+                </div>
+                <div class="stat-box history">
+                    <label>RECORDE</label>
+                    <div id="high-score">000000</div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="controls-area">
+            <div class="dpad">
+                <button id="btn-left" class="control-btn">←</button>
+                <div class="dpad-vertical">
+                    <button id="btn-up" class="control-btn">↻</button>
+                    <button id="btn-down" class="control-btn">↓</button>
+                </div>
+                <button id="btn-right" class="control-btn">→</button>
+            </div>
+            <div class="action-btns">
+                <button id="btn-pause" class="control-btn secondary">PAUSE</button>
+                <button id="btn-drop" class="control-btn primary">SPACE</button>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
